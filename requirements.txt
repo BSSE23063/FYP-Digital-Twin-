@@ -1,0 +1,42 @@
+# Web Framework & API
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+pydantic>=2.6.0
+python-multipart>=0.0.9
+
+# Database & ORM
+sqlalchemy>=2.0.28
+psycopg2-binary>=2.9.9
+alembic>=1.13.0
+
+# Vector Database
+chromadb>=0.4.24
+
+# LangChain + LangGraph (RAG Pipeline)
+langgraph>=0.2.0
+langchain-core>=0.3.0
+langchain-groq>=0.2.0
+langchain-chroma>=0.2.0
+langchain-huggingface>=0.1.0
+langchain-community>=0.3.0
+
+# Embeddings & ML
+sentence-transformers>=2.5.1
+
+# LLM
+groq>=0.4.2
+
+# Document Parsing
+pypdf>=4.1.0
+python-docx>=1.1.0
+
+# Config & Utilities
+python-dotenv>=1.0.1
+pyyaml>=6.0.1
+
+# Frontend
+streamlit>=1.32.2
+
+# Dev & Testing
+pytest>=8.0.0
+ruff>=0.3.0
