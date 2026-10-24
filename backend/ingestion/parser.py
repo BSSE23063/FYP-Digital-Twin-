@@ -2,7 +2,6 @@
 Document parser module.
 Extracts raw text from PDF, DOCX, TXT, and Markdown files.
 """
-
 from pathlib import Path
 import re
 
@@ -26,7 +25,7 @@ def parse_pdf(file_path: Path) -> str:
 
     reader = PdfReader(str(file_path))
     pages = []
-    for idx, page in enumerate(reader.pages):
+    for page in reader.pages:
         page_text = page.extract_text()
         if page_text:
             pages.append(page_text.strip())
@@ -63,9 +62,8 @@ def parse_document(file_path: Path | str) -> str:
         return parse_pdf(path)
     elif ext == ".docx":
         return parse_docx(path)
-    elif ext in [".txt", ".md", ".markdown"]:
+    elif ext in (".txt", ".md", ".markdown"):
         return parse_text_or_markdown(path)
     else:
         # Fallback to plain text read
         return parse_text_or_markdown(path)
-
